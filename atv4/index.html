@@ -1,39 +1,35 @@
-<!doctype html>
+><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Imagem com caixa translúcida - Igual</title>
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-
-
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;font-family:"Playfair Display",serif;background:#111}
-
-
-    .stage{
-      position:relative;
-      min-height:100vh;
-      width:100%;
-      overflow:hidden;
-      display:flex;
-      align-items:flex-start;
-      justify-content:flex-start;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texto sobre Imagem</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Georgia', serif;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), /* camada escura sobre a imagem */
+            url(atv4.jpg) no-repeat center center/cover;
     }
 
 
-    .bg {
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center top;
-      z-index:0;
-      transform:translateZ(0);
+    .texto-sobreposto {
+        background-color: rgba(0, 0, 0, 0.6); /* fundo ainda mais escuro */
+        color: red;
+        font-size: 3.3rem; /* texto maior */
+        line-height: 1.35;
+        padding: 40px 50px;
+        margin-top: 40px;
+        max-width: 90%;
+        text-align: justify;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 0px;
     }
 
 
@@ -78,21 +74,21 @@
       .card p{ font-size:22px; line-height:1.12 }
     }
   </style>
+    @media (max-width: 768px) {
+        .texto-sobreposto {
+            font-size: 1.8rem;
+            padding: 25px;
+        }
+    }
+</style>
 </head>
 <body>
 
 
-  <main class="stage" role="main" aria-label="Imagem com caixa de texto">
-    <img class="bg" src="atv4.jpg" alt="Fundo">
-    <div class="overlay" aria-hidden="true"></div>
-
-
-    <article class="card" aria-labelledby="titulo">
-      <p id="titulo">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat cupiditate facere cumque ratione odio doloremque deserunt dignissimos sunt eum alias voluptatum repellendus, quis, dolores perspiciatis enim vero nam quisquam possimus.
-      </p>
-    </article>
-  </main>
+<div class="texto-sobreposto">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat <br>
+    cupiditate facere cumque ratione odio doloremque deserunt dignissimos sunt eum alias voluptatum repellendus, quis, dolores perspiciatis enim vero nam quisquam possimus.
+</div>
 
 
 </body>
