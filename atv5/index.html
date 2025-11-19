@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox e Grid - Explicação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f7ff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a76ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4a76ff;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0002;
+        }
+
+        .demo-container {
+            margin-top: 15px;
+            padding: 15px;
+            background: #eef3ff;
+            border-radius: 8px;
+        }
+
+        /* FLEXBOX DEMO */
+        .flex-demo {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            background: #dce7ff;
+            border-radius: 8px;
+        }
+
+        .box {
+            background: #4a76ff;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* GRID DEMO */
+        .grid-demo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 15px;
+            background: #dce7ff;
+            border-radius: 8px;
+        }
+
+        .grid-box {
+            background: #4a76ff;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Flexbox e Grid (CSS)</h1>
+    <p>Principais propriedades e exemplos visuais</p>
+</header>
+
+<section>
+    <h2>🔵 O que é Flexbox?</h2>
+    <p>Flexbox é um sistema de layout unidirecional (linha ou coluna), ideal para organizar itens em sequência.</p>
+
+    <h3>Principais propriedades:</h3>
+    <ul>
+        <li><strong>flex-direction</strong> – define direção (linha ou coluna)</li>
+        <li><strong>flex-wrap</strong> – permite quebra de linha</li>
+        <li><strong>justify-content</strong> – alinha no eixo principal</li>
+        <li><strong>align-items</strong> – alinha no eixo cruzado</li>
+        <li><strong>align-content</strong> – distribui espaço entre linhas</li>
+        <li><strong>gap</strong> – espaçamento entre itens</li>
+        <li><strong>order</strong> – muda a ordem dos itens</li>
+        <li><strong>flex-grow / flex-shrink</strong> – expandir/encolher</li>
+        <li><strong>flex-basis</strong> – tamanho inicial</li>
+        <li><strong>align-self</strong> – alinhamento individual</li>
+    </ul>
+
+    <h3>Exemplo prático:</h3>
+    <div class="demo-container">
+        <div class="flex-demo">
+            <div class="box">Item 1</div>
+            <div class="box">Item 2</div>
+            <div class="box">Item 3</div>
+        </div>
+        <p><em>Layout flexível onde os itens se ajustam automaticamente.</em></p>
+    </div>
+
+    <h3>Vantagens:</h3>
+    <ul>
+        <li>Ótimo para componentes e pequenas estruturas.</li>
+        <li>Alinhamento fácil e preciso.</li>
+        <li>Comportamento flexível e responsivo.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🟣 O que é CSS Grid?</h2>
+    <p>Grid é um sistema de layout bidimensional (linhas e colunas), ideal para layouts completos de páginas.</p>
+
+    <h3>Principais propriedades:</h3>
+    <ul>
+        <li><strong>grid-template-columns / rows</strong> – define a grade</li>
+        <li><strong>grid-template-areas</strong> – cria áreas nomeadas</li>
+        <li><strong>gap</strong> – espaçamento entre células</li>
+        <li><strong>justify-items / align-items</strong> – alinhamento dentro das células</li>
+        <li><strong>justify-content / align-content</strong> – alinhamento da grade inteira</li>
+        <li><strong>grid-column / grid-row</strong> – posição dos itens</li>
+        <li><strong>auto-fit / auto-fill / minmax() / repeat()</strong> – responsividade avançada</li>
+    </ul>
+
+    <h3>Exemplo prático:</h3>
+    <div class="demo-container">
+        <div class="grid-demo">
+            <div class="grid-box">1</div>
+            <div class="grid-box">2</div>
+            <div class="grid-box">3</div>
+            <div class="grid-box">4</div>
+            <div class="grid-box">5</div>
+            <div class="grid-box">6</div>
+        </div>
+        <p><em>Exemplo de grade com 3 colunas iguais.</em></p>
+    </div>
+
+    <h3>Vantagens:</h3>
+    <ul>
+        <li>Melhor para layouts grandes e complexos.</li>
+        <li>Controle total sobre linhas e colunas.</li>
+        <li>Facilita criação de grades responsivas e áreas estruturadas.</li>
+    </ul>
+</section>
+
+</body>
+</html>
